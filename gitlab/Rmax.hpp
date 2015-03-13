@@ -5,17 +5,17 @@ class Rmax
 	public:
 	Rmax(); 
 	Rmax(double value); 
-	Rmax(Rmax& other); 
+	Rmax(Rmax t); 
 
-	Rmax operator+(Rmax other);
-	Rmax operator*(Rmax other);
-	Rmax& operator=(Rmax other);
-	bool operator==(Rmax& other);
+	Rmax operator+(Rmax x);
+	Rmax operator*(Rmax x);
+	Rmax& operator=(Rmax x);
+	bool operator==(Rmax& x);
 
-	std::string toString();
+	std::string ToString();
 
-	double value;
-	static Rmax zero; 
-	static Rmax unit;
+	double x;
+	static Rmax _1; 
+	static Rmax _0;
 };
 #endif 
