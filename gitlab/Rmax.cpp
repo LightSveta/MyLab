@@ -3,10 +3,10 @@
 #include <limits>
 
 Rmax Rmax::zero(-std::numeric_limits<double>::infinity());
-Rmax Rmax::unit(0);
+Rmax Rmax::unit(1);
 
 Rmax::Rmax() 
-: value(-std::numeric_limits<double>::infinity()) 
+: value(+std::numeric_limits<double>::infinity()) 
 {
 }
 Rmax::Rmax(double value)
@@ -38,7 +38,7 @@ return value==other.value;
 std::string Rmax::toString()
 {	std::stringstream out;
 	if(*this==zero)
-		out<<"-oo";
+		out<<"-infinity";
 	else
 		out<<value;
 	return out.str();
